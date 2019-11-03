@@ -13,7 +13,15 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
 
     <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js">
+	function check(){
+	var a =document.getElementById('password');
+	var b=document.getElementById('repassword');
+	if(a!=b)
+		alert("PASSWORDS DON"T MATCH");
+		
+	}
+	</script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
     <script src="js/bootstrap.min.js"></script>
 
@@ -50,7 +58,7 @@
                 </li>
                 <li><a href="login.html">Login</a>
                 </li>
-                <li><a href="signin.html">Sign Up</a>
+               <li><a href="signin.html">Sign Up</a>
                 </li>
             </ul>
         </div>
@@ -59,19 +67,19 @@
 </div>
 
 <div class="container">
-        <form class="form-signup" method="post" action="/signin" id="signupform">
+        <form class="form-signup" method="post" action="signup.py" id="signupform">
             <h2 class="form-signup-heading"><font color="black">Sign Up! It's Free!!!</font></h2>
-            <input type="text" class="form-control" placeholder="First Name" name="fname" required autofocus>
-            <input type="text" class="form-control" placeholder="Last Name" name="lname" required >
-            <input type="date" class="form-control" placeholder="Date of Birth" name="birthday" required>
-            <input type="email" class="form-control" placeholder="Email Address" name="email" required>
-            <input type="text" class="form-control" placeholder="Mobile Number" name="phone" required>
-            <textarea class="form-control" rows="3" placeholder="Address" name="address"></textarea>
-            <input type="password" class="form-control" placeholder="Password" name="password" id="passwd" required>
-            <input type="password" class="form-control" placeholder="Confirm Password" name="repassword" required>
+            <input type="text" class="form-control" placeholder="First Name" id="fname" required autofocus>
+            <input type="text" class="form-control" placeholder="Last Name" id="lname" required >
+            <input type="date" class="form-control" placeholder="Date of Birth" id="dob" required>
+            <input type="email" class="form-control" placeholder="Email Address" id="email" required>
+            <input type="text" class="form-control" placeholder="Mobile Number" id="phone" required>
+            <textarea class="form-control" rows="3" placeholder="Address" id="address"></textarea>
+            <input type="password" class="form-control" placeholder="Password" id="password" required>
+            <input type="password" class="form-control" placeholder="Confirm Password" id="repassword" required>
 
             <br>
-            <button type="submit" class=" btn btn-primary btn-block btn-lg">Sign Up</button>
+            <input type="submit" class=" btn btn-primary btn-block btn-lg" onclick="check()" id="btn"> 
         </form>
 </div>
 
